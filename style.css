@@ -1,0 +1,64 @@
+#container {
+    width: 600px;
+    height: 600px;
+    display: grid;
+}
+
+
+ #container div {
+    border: 1px solid #ccc; /* Tambahkan border untuk melihat grid */
+} 
+
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(215, 253, 253);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 30px 0;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: rgb(113, 160, 248);
+    color: azure;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+/* container styles */
+/* #container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center; */
+    /* border: 1px solid rgb(113, 160, 248); */
+    /* margin-bottom: 50px;
+} */
+
+/* #container div {
+    border: 1px solid black;
+} */
