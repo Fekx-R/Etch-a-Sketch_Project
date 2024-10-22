@@ -1,19 +1,28 @@
-let click = true
+let click = true;
 
 // default color
-const colorDiv = (e) => { 
-    e.target.style.backgroundColor = 'red';
+const colorDiv = (e) => {
+    if (click) {                                    // function colorDiv() {
+        e.target.style.backgroundColor = 'red';     //     this.style.backgroundColor = "black"; // You could use this or left
+    }                                               // }
 };
-// function colorDiv() {
-//     this.style.backgroundColor = "black"; // You could use this or above
-// }
+
+// when we click in the body will stop the coloring
+document.querySelector("body").addEventListener('click', (e)=> {
+    if (e.target.tagName != 'BUTTON') {
+        click = !click;
+        document.querySelector('.mode').textContent = click ? 'Mode: Coloring' : 'Mode: Not Coloring';
+    }
+})
 
 // change color divs
 const changeToRed = () => {
     const divs = document.querySelectorAll("#container div"); // other alternative 
     divs.forEach(div => {
         div.addEventListener("mouseover", (e)=> {
-            e.target.style.backgroundColor = "red";
+            if (click) {   // check if we click then stop coloring
+                e.target.style.backgroundColor = "red";
+            }
         })
     })
 };
@@ -21,7 +30,9 @@ const changeToRandomColor = () => {
     const divs = container.querySelectorAll("div"); // other alternative
     divs.forEach(div => {
         div.addEventListener("mouseover", (e)=> {
-            e.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+            if (click) {    // check if we click then stop coloring
+                e.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+            }
         })
     })
 };
@@ -29,7 +40,9 @@ const changeToBlack = () => {
     const divs = document.querySelectorAll("#container div");
     divs.forEach(div => {
         div.addEventListener("mouseover", (e)=> {
-            e.target.style.backgroundColor = "black";
+            if (click) {    // check if we click then stop coloring
+                e.target.style.backgroundColor = "black";
+            }
         })
     })
 };
@@ -76,10 +89,10 @@ const resetGrid = () => {
 
 
 
-document.getElementById("change-grid").addEventListener("click", changeSizeGrid); // for change size grid
-// change color when you hover the divs
+document.getElementById("change-grid").addEventListener("click", changeSizeGrid);
+
 document.getElementById("default-color").addEventListener("click", changeToRed);
 document.getElementById("random-color").addEventListener("click", changeToRandomColor);
 document.getElementById("dark-color").addEventListener("click", changeToBlack);
-// clear the colors of divs
+
 document.getElementById("reset").addEventListener("click", resetGrid);
