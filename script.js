@@ -8,7 +8,7 @@ const colorDiv = (e) => {
 };
 
 // when we click in the body will stop the coloring
-document.querySelector("body").addEventListener('click', (e)=> {
+document.querySelector("#container").addEventListener('click', (e)=> {
     if (e.target.tagName != 'BUTTON') {
         click = !click;
         document.querySelector('.mode').textContent = click ? 'Mode: Coloring' : 'Mode: Not Coloring';

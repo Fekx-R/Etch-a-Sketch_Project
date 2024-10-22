@@ -1,21 +1,4 @@
-#container {
-    width: 600px;
-    height: 600px;
-    display: grid;
-    
-}
-
-
- #container div {
-    border: 1px solid #ccc; /* Tambahkan border untuk melihat grid */
-} 
-
-
-
-
-
-
-/* * {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,43 +6,144 @@
 }
 
 body {
-    background-color: rgb(215, 253, 253);
+    background: linear-gradient(135deg, rgb(215, 253, 253), rgb(97, 116, 152));
 }
+
+#container {
+    width: 700px;
+    height: 700px;
+    display: grid;
+    margin: 0 auto;
+}
+
+
+ #container div {
+    border: 1px solid #ccc; /* Tambahkan border untuk melihat grid */
+} 
 
 h1 {
     display: flex;
     justify-content: center;
-    margin: 30px auto;
+    font-size: 2rem;
+    margin: 20px 0;
 }
 
 .buttons {
     display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin: 30px 0;
+    justify-content: space-evenly;
+    width: 800px;
+    margin: 0 auto;
 }
 
 button {
-    padding: 5px 10px;
-    background-color: rgb(113, 160, 248);
-    color: azure;
+    padding: 7px 15px;
+    border-radius: 50px;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    outline: none;
     cursor: pointer;
-} */
+}
 
-/* container styles */
-/* #container {
+.mode {
+    font-size: 1rem;
+    font-weight: 600;
     display: flex;
-    flex-wrap: wrap;
-    max-width: 960px;
-    margin: 0 auto;
     justify-content: center;
-    align-items: center; */
-    /* border: 1px solid rgb(113, 160, 248); */
-    /* margin-bottom: 50px;
-} */
+    margin: 20px 0 20px 0;
+}
 
-/* #container div {
-    border: 1px solid black;
-} */
+p {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 1rem;
+}
+
+/* styling buttons */
+#change-grid{
+    position: relative;
+    background: white;
+    color: black;
+    border: .5px solid black;
+    z-index: 5;
+}
+#change-grid:hover {
+    position: relative;
+    background: rgb(50, 44, 81);
+    color: white;
+    border: .5px solid white;
+    z-index: 5;
+}
+#change-grid::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 133px;
+    height: 1px;
+    background-color: gray;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+#change-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 33%;
+    height: 39px;
+    width: 1px;
+    background-color: gray;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+span {
+    position: relative;
+}
+span::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -24px;
+    height: 39px;
+    width: 1px;
+    background-color: gray;
+    transform: translateX(-50%);
+    z-index: -3;
+}
+
+
+#default-color {
+    background-color: red;
+    color: white;
+}
+#default-color:hover {
+    background-color: white;
+    color: red;
+}
+
+#random-color {
+    background: linear-gradient(90deg, rgb(176, 255, 176), rgb(253, 253, 146), rgb(171, 171, 255));
+    color: black;
+}
+#random-color:hover {
+    background: linear-gradient(90deg, rgb(171, 171, 255), rgb(176, 255, 176), rgb(253, 253, 146));
+    color: black;
+}
+
+#dark-color {
+    background-color: black;
+    color: white;
+}
+#dark-color:hover {
+    background-color: white;
+    color: black;
+}
+
+#reset {
+    background: linear-gradient(45deg, white, rgb(226, 226, 226));
+    border: .5px solid black;
+}
+#reset:hover {
+    background: linear-gradient(45deg,rgb(226, 226, 226), white);
+    border: .5px solid white;
+}
