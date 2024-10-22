@@ -72,7 +72,7 @@ getGrid(16);
 // change size of grid between 2 until 100
 const changeSizeGrid = () => {
     let gridInput = prompt("set between 2 and 100", 16);
-    if (gridInput < 2 || gridInput > 100) {
+    if (gridInput < 2 || gridInput > 100 || isNaN(gridInput)) {
         alert("Please input number between 2 and 100");
     } else {
         getGrid(gridInput)

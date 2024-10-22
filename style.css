@@ -69,6 +69,7 @@ p {
     background: white;
     color: black;
     border: .5px solid black;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     z-index: 5;
 }
 #change-grid:hover {
@@ -117,8 +118,9 @@ span::before {
 
 
 #default-color {
-    background-color: red;
+    background: red;
     color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 #default-color:hover {
     background-color: white;
@@ -128,15 +130,18 @@ span::before {
 #random-color {
     background: linear-gradient(90deg, rgb(176, 255, 176), rgb(253, 253, 146), rgb(171, 171, 255));
     color: black;
+    transition: opacity .3s ease-in-out;
 }
 #random-color:hover {
     background: linear-gradient(90deg, rgb(171, 171, 255), rgb(176, 255, 176), rgb(253, 253, 146));
     color: black;
+    opacity: .8;
 }
 
 #dark-color {
     background-color: black;
     color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 #dark-color:hover {
     background-color: white;
@@ -146,6 +151,7 @@ span::before {
 #reset {
     background: linear-gradient(45deg, white, rgb(226, 226, 226));
     border: .5px solid black;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 #reset:hover {
     background: linear-gradient(45deg,rgb(226, 226, 226), white);
