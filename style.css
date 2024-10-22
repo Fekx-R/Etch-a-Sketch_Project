@@ -5,8 +5,11 @@
     font-family: 'poppins', sans-serif;
 }
 
-body {
+.background {
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(135deg, rgb(215, 253, 253), rgb(97, 116, 152));
+    overflow: hidden;
 }
 
 #container {
@@ -14,6 +17,7 @@ body {
     height: 700px;
     display: grid;
     margin: 0 auto;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.322);
 }
 
 
@@ -103,7 +107,7 @@ span::before {
     content: '';
     position: absolute;
     top: -8px;
-    left: -24px;
+    left: -26px;
     height: 39px;
     width: 1px;
     background-color: gray;
